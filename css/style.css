@@ -1,0 +1,376 @@
+/*CSS Variable*/
+
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --primary-color: #216900;
+    --primary-color-hover: #299100;
+    --secondary-color: #006875;
+    --secondary-color-hover: #009da8;
+    --light-color: #f4f4f4;
+}
+
+body {
+    font-family: 'PT Sans', sans-serif;
+    background-color: #252529;
+    margin: 0;
+    line-height: 1.6;
+    color: #fff;
+}
+
+img {
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: #eee;
+}
+
+.section {
+    padding: 2rem 0;
+}
+
+.section h3 {
+    font-size: 2rem;
+}
+
+.text-secondary {
+    color: var(--secondary-color);
+}
+
+.gift-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: left;
+}
+
+.gift-cards img {
+    width: 400px;
+}
+
+section#entertainment {
+    background-image: url('../images/pexels-eberhard-grossgasteiger-2098428.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    padding: 10rem 0;
+}
+
+.section-head {
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.btn {
+    display: inline-block;
+    padding: 1rem;
+    color: #fff;
+}
+
+/* .btn-primary {
+    background: var(--primary-color);
+    border-radius: 5px;
+    transition: all .3s linear;
+} */
+
+.btn-primary {
+    text-decoration: none;
+    position: relative;
+    display: inline-block;
+    padding: 0;
+    margin: 1rem;
+}
+
+/* .btn-primary:hover {
+    background: var(--primary-color-hover);
+} */
+
+.btn-primary::before,
+.btn-primary::after {
+    content: "";
+    position: absolute;
+    width: 75px;
+    height: 75px;
+    border: 2px solid rgb(216, 23, 174);
+    top: -15px;
+    left: 50%;
+    z-index: 1;
+    margin: 0px 0px 0px -40px;
+    transition: all .8s ease 0s;
+}
+
+.btn-primary::before {
+    animation: rotate 15s infinite linear;
+}
+
+.btn-primary::after {
+    animation: rotate 20s infinite linear;
+}
+
+.button_text {
+    position: relative;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 25px;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 1px;
+    color: #eee;
+    font-weight:normal;
+    border: none;
+    border-radius: 30px;
+    top: 0;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+
+.button_text::before,
+.button_text::after {
+    content: "";
+    position: absolute;
+    width: 51%;
+    height: 100%;
+    background-color: rgb(55, 133, 24);
+    transition: all .8s ease 0s;
+}
+
+
+.button_text::before {
+    left: 0;
+    z-index: 2;
+}
+
+
+.button_text::after {
+    right: 0;
+}
+
+.button_text span {
+    position: relative;
+    z-index: 2;
+}
+
+.btn-primary:hover::before, 
+.btn-primary:hover::after {
+    left: 100%;
+    opacity: 0;
+}
+
+
+.btn-primary:hover .button_text {
+    top: -10px;
+    transition: all .5s ease .2s;
+    color: white;
+    box-shadow: 0 6px 0 rgb(0, 90, 5);
+}
+
+
+.btn-primary:hover .button_text::before {
+    width: 100%;
+}
+
+.btn-primary:hover .button_text::before,
+.btn-primary:hover .button_text::after {
+    background-color: rgb(5, 121, 1);
+}
+
+
+.btn-primary:active .button_text {
+    top: -7px;
+    transition: all .1s ease 0s;
+    box-shadow: 0 2px 0 rgb(16, 44, 0);
+}
+
+@keyframes rotate {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+.btn-secondary {
+    background: var(--secondary-color);
+    border-radius: 5px;
+    transition: all .3s linear;
+}
+
+.btn-secondary:hover {
+    background: var(--secondary-color-hover);
+}
+
+#showcase {
+    margin: 0;
+    padding: 0;
+    background-image: url('../images/travel-landscape-2.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow-y: hidden;
+}
+
+#showcase .container {
+    margin-top: 25vh;
+}
+
+#showcase h1 {
+    font-size: 4rem;
+    margin-bottom: 0;
+}
+
+#showcase h2 {
+    font-size: 2rem;
+}
+
+.lead {
+    font-size: 1.3rem;
+}
+
+.mb {
+    margin-bottom: 1rem;
+}
+
+.mt {
+    margin-top: 1rem;
+}
+
+.bg-light {
+    background: var(--light-color);
+    color: #333;
+}
+
+/*Footer*/
+ footer .footer-cols {
+     display: flex;
+     justify-content: space-between;
+     padding: 2rem;
+     text-align: left;
+     font-size: 14px;
+}
+
+ footer .footer-cols ul {
+     list-style-type: none;
+}
+
+ footer .footer-cols ul li:first-child{
+    font-size: 1.2rem;
+    padding-bottom: .5rem;
+    border-bottom:  1px solid #444;
+    margin-bottom: 1rem;
+}
+
+footer .footer-bottom {
+    background-color: #333;
+    padding: 1rem;
+}
+
+footer .footer-cols a:hover {
+    text-decoration: underline;
+}
+
+/*Utility Classes*/
+
+.container {
+    max-width: 1180px;
+    text-align: center;
+    margin: 0 auto;
+    padding: 0 3rem;
+}
+
+.text-center {
+    text-align: center;
+}
+
+
+
+/*Навигация*/
+nav {
+    position: fixed;
+    width: 100%;
+    height: 40px;
+    background-color: rgba(51, 51, 51, .9);
+    color: #eee;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    display: inline;
+    float: left;
+    transition: all .2s linear;
+}
+
+nav a {
+    display: inline-block;
+    width: 100px;
+    text-align: center;
+    text-decoration: none;
+    padding: 10px 0;
+    color: #eee;
+}
+
+nav li:hover {
+    background-color: #444;
+}
+
+nav a#openup {
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 580px) {
+    .gift-cards {
+        display: flex;
+        flex-direction: column;
+    }
+    footer .footer-cols {
+        flex-direction: column;
+        text-align: center;
+   }
+   #showcase .container {
+    margin-top: 30vh;
+}
+}
